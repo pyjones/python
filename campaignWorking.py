@@ -40,11 +40,15 @@ clicks = float(raw_input(prompt))
 
 print "======"
 
-print "For the campaign", campaign_name
-print "The cost per unique is: $", "%.2f" % cost_per_unique(campaign_value, campaign_uniques) 
-print "The cost per minute is: $", "%.2f" % cost_per_minute(campaign_value,dwell_time)
-print "The CPM of this campaign is: $", "%.2f" % cpm(campaign_value,impressions)
-print "The CPC of this campaign is: $", "%.2f" % cpc(campaign_value,clicks)
+print "For the campaign: ", campaign_name
+print "The value of this campaign was: $ %.0f" % campaign_value
+print "Number of impressions delivered: %.0f" % impressions
+print "Number of clicks delivered: %.0f" % clicks
+print "Total dwell time: %.0f" % dwell_time, "minutes" 
+print "The cost per unique was: $", "%.2f" % cost_per_unique(campaign_value, campaign_uniques) 
+print "The cost per minute was: $", "%.2f" % cost_per_minute(campaign_value,dwell_time)
+print "The CPM of this campaign was: $", "%.2f" % cpm(campaign_value,impressions)
+print "The CPC of this campaign was: $", "%.2f" % cpc(campaign_value,clicks)
 
 print "======"
 
