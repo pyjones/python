@@ -15,6 +15,7 @@ def workOutImpressions(cpm,budget):
 prompt = ">>>"
 
 print "what metric do you want to work out?"
+print "Enter CPM, budget, impressions."
 metric = raw_input(prompt)
 
 if metric == "cpm":
@@ -33,7 +34,13 @@ elif metric == "impressions":
 	budget = float(raw_input(prompt))
 	print "The impressions are:" "%.0f" % workOutImpressions(cpm,budget)
 
-# Still in progress. 
+elif metric == "budget":
+	print "Okay, you want to work out the budget"
+	print "Please let me know the CPM"
+	cpm = float(raw_input(prompt))
+	print "Now let me know the impressions"
+	impressions = float(raw_input(prompt))
+	print "The budget is: " "%.2f" % workOutBudget(cpm,impressions)
 
 else:
 	print "You haven't entered a valid function to run"    
