@@ -29,7 +29,7 @@ if metric == "cpm":
 elif metric == "impressions":
 	print "Okay, you want to work out impressions"
 	print "Please let me know the CPM"
-	cpm = float(raw_input(prompt))
+	cpm = float(raw_input(prompt)) 
 	print "Now let me know the budget"
 	budget = float(raw_input(prompt))
 	print "The impressions are:" "%.0f" % workOutImpressions(cpm,budget)
