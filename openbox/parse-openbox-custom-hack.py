@@ -39,7 +39,7 @@ def parse_shown(eventlabel):
     for item in data.get('items', []):
         cid = item.get('cid')
         otype = item.get('typ')
-        desc = item.get('desc')
+        desc = item.get('desc').encode('UTF-8', 'ignore')
         if otype == 'Custom' or cid is not None:
             if otype == 'Custom':
                 cid_key = "CUSTOM-WIDGET-{0},{1},{2}".format(cid, otype, desc)
