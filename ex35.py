@@ -25,20 +25,25 @@ def bear_room():
 	while True:
 		next = raw_input(">>> ")
 
-		if next == "take honey":
+		if next == "take honey": # If 'take honey' is entered and value is false, as it's originally set to. 
+			print "bear moved value= %r" % bear_moved
 			dead("The bear looks at you and then slaps your face")
-		elif next == "taunt bear" and not bear_moved:
+		# BELOW ELIF is effectively saying AND NOT False which is therefore True but it doesn't re-assign bear_moved value. It needs to be true to go to this loop because the while loop is true
+		elif next == "taunt bear" and not bear_moved: 
+			print "bear moved value= %r" % bear_moved # Still false, as it's not been reassigned
 			print "The bear has moved from the door. You can go through"
-			bear_moved = True
-		elif next == "taunt bear" and bear_moved:
+			bear_moved = True # This is reassignment
+		elif next == "taunt bear" and bear_moved: # If the value is True it goes to this condition
+			print "bear moved value= %r" % bear_moved
 			dead("The bear gets pissed off and chews your leg off.")
-		elif next == "open door" and bear_moved:
+		elif next == "open door" and bear_moved: # If the value is true it goes to this condition
+			print "bear moved value= %r" % bear_moved
 			gold_room()
 		else:
 			print "I got no idea what that means."
 
 def dimple_room():
-	print "Here you see the great evil Dimple"
+	print "Here you see the great evil Simon"
 	print "She stares at you and you go insane"
 	print "Do you flee for your life or eat your head?"
 
